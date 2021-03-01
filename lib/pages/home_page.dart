@@ -17,12 +17,28 @@ class _HomePageState extends State<HomePage> {
           VxAnimatedBox()
               .size(context.screenWidth, context.screenHeight)
               .withGradient(
-                LinearGradient(colors: [
-                  AIColors.primaryColor2,
-                  AIColors.primaryColor1,
-                ]),
+                LinearGradient(
+                  colors: [
+                    AIColors.primaryColor1,
+                    AIColors.primaryColor2,
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
               )
-              .make()
+              .make(),
+          AppBar(
+            title: "AI Radio"
+                .text
+                .xl4
+                .bold
+                .white
+                .make()
+                .shimmer(primaryColor: AIColors.primaryColor2),
+            backgroundColor: Colors.transparent,
+            elevation: 0.0,
+            centerTitle: true,
+          )
         ],
       ),
     );
