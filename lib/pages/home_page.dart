@@ -10,8 +10,21 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: AIColors.primaryColor1,
+    return Scaffold(
+      drawer: Drawer(),
+      body: Stack(
+        children: [
+          VxAnimatedBox()
+              .size(context.screenWidth, context.screenHeight)
+              .withGradient(
+                LinearGradient(colors: [
+                  AIColors.primaryColor2,
+                  AIColors.primaryColor1,
+                ]),
+              )
+              .make()
+        ],
+      ),
     );
   }
 }
