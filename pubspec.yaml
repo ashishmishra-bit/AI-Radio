@@ -26,6 +26,7 @@ dependencies:
     audioplayers: ^0.17.4
     cupertino_icons: ^1.0.2    
     velocity_x: ^1.4.1
+    alan_voice: ^2.0.15
 
 dev_dependencies:
     flutter_test:
